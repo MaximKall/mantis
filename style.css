@@ -112,14 +112,15 @@ section {
 }
 
 .video-container {
-  width: 100%;
-  height: auto;
+  width: auto;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .video-container video {
-  width: 100%;
-  height: auto;
+  width: auto;
+  max-height: 500px;
 }
 
 .contact-content {
