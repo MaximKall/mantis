@@ -78,11 +78,16 @@ section {
 
 .home-content h1 {
   padding-top: 10svh;
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-align: center;
 }
 
+.home-content h2 {
+  font-size: 2.5rem;
+}
+
 .home-content p {
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -100,9 +105,9 @@ section {
   display: inline-block;
   padding: 10px 20px;
   background-color: transparent;
-  color: red;
+  color: #41bf67;
   font-size: 16px;
-  border: 2px solid red;
+  border: 2px solid #41bf67;
   border-radius: 4px;
   cursor: pointer;
   position: relative;
@@ -120,7 +125,7 @@ section {
   right: -100%;
   width: 0%;
   height: 100%;
-  background-color: red;
+  background-color: #41bf67;
   transition: right 0.3s ease-in-out, width 0.3s ease-in-out;
   z-index: -1;
 }

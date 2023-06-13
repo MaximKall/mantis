@@ -82,27 +82,16 @@ p {
     }
 }
 
-.nav-logo {
-    margin-left: 3vw;
-}
-
-.nav-logo>a {
-    color: white;
-}
-
 .nav-item>a {
     color: white;
 }
 
-.logo {
-    font-size: 1.4rem;
-    color: white;
-}
+.logo {}
 
-.logo:hover {
-    animation: logo;
-    animation-duration: 0.1s;
-    animation-fill-mode: forwards;
+.logo:hover {}
+
+.imgLogo {
+    height: 9svh;
 }
 
 @keyframes logo {
