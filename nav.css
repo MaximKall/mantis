@@ -1,248 +1,172 @@
-body {
-    font-family: Courier;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-    font-size: 1.2rem;
+li {
+    list-style: none;
 }
 
-::-webkit-scrollbar {
-    background-color: black;
-    width: 0.4em;
+a {
+    text-decoration: none;
 }
 
-::-webkit-scrollbar-thumb {
-    background: rgb(82, 82, 82, 0.7);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(82, 82, 82);
-}
-
-h1,
-h2,
 p {
     margin: 0;
 }
 
-section {
+.navbar {
+    background: black;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 10svh;
-    padding-bottom: 5svh;
+    height: 8dvh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.content {
-    width: 700px;
+.hamburger {
+    display: none;
 }
 
-.content h2 {
-    text-align: center;
-    padding-bottom: 3svh;
-    font-size: 2.5rem;
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
 }
 
-.about-content {
-    max-width: 1150px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.about-columns {
+.nav-menu {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2.5rem;
 }
 
-.about-column {
-    margin: 20px;
-    padding: 20px;
-    background: #f5f5f5;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.nav-item {
     text-align: center;
-    border-radius: 3svh;
+    width: 12vw;
 }
 
-.about-column h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.about-column p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.home-content {
-    padding-top: 10svh;
-    padding-bottom: 10svh;
-}
-
-.home-content h1 {
-    color: #41bf67;
-    font-size: 4rem;
-    text-align: center;
-}
-
-.home-content h2 {
-    font-size: 2.5rem;
-}
-
-.home-content p {
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.home-content a {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.services-content ul {
-    padding: 0;
-    text-align: center;
-}
-
-.testimonial-content p {
-    text-align: center;
-    font-size: 1.2rem;
-    padding-bottom: 2svh;
-}
-
-.video-container {
-    width: auto;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-
-.video-container video {
-    width: auto;
-    max-height: 500px;
-}
-
-.contact-content {
-    text-align: center;
-}
-
-.buttonRich {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: transparent;
-    color: #41bf67;
-    border: 3px solid #41bf67;
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease-in-out;
-    width: 30vw;
-    text-align: center;
-    font-weight: 600;
+.nav-link {
     font-size: 1.4rem;
-}
-
-.buttonRich::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -100%;
-    width: 0%;
-    height: 100%;
-    background-color: #41bf67;
-    transition: right 0.3s ease-in-out, width 0.3s ease-in-out;
-    z-index: -1;
-}
-
-.buttonRich:hover {
-    color: white;
-}
-
-.buttonRich:hover::before {
-    right: 0;
-    width: 100%;
-}
-
-.buttonRich:not(:hover)::before {
-    right: 100%;
-    width: 0%;
-}
-
-.buttonKnowledge {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: transparent;
+    font-weight: 500;
     color: black;
-    border: 3px solid black;
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease-in-out;
-    width: 30vw;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.4rem;
 }
 
-.buttonKnowledge::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 0%;
-    height: 100%;
-    background-color: black;
-    transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
-    z-index: -1;
+.nav-link:hover {
+    animation: linkIn;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
 }
 
-.buttonKnowledge:hover {
+@keyframes linkIn {
+    from {
+        font-size: auto;
+    }
+
+    to {
+        font-weight: 1000;
+        font-size: 1.6rem;
+    }
+}
+
+@keyframes linkOut {
+    from {
+        font-weight: 1000;
+        font-size: 1.6rem;
+    }
+
+    to {
+        font-size: auto;
+    }
+}
+
+.nav-item>a {
     color: white;
 }
 
-.buttonKnowledge:hover::before {
-    left: 0;
-    width: 100%;
+.imgLogo {
+    height: 9svh;
 }
 
-.buttonKnowledge:not(:hover)::before {
-    left: 100%;
-    width: 0%;
-}
+@keyframes logo {
+    from {
+        font-size: auto;
+    }
 
-
-footer {
-    padding: 20px;
-    text-align: center;
+    to {
+        font-weight: 1000;
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
-    .content {
-        width: calc(100vw - 30px);
-        padding-left: 15px;
-        padding-right: 15px;
+    .nav-menu {
+        position: fixed;
+        left: calc(-100vw - 20px);
+        top: calc(9svh + 10px);
+        flex-direction: column;
+        background: black;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        width: calc(100vw - 20px);
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 0px;
+        padding: 0;
+        z-index: 99;
     }
 
-    .home-content h1 {
-        font-size: 3rem;
+    .navbar {
+        height: 6svh;
+        padding-top: 1.5svh;
+        padding-bottom: 1.5svh;
     }
 
-    .home-content h2 {
-        font-size: 1.8rem;
+    .nav-menu.active {
+        left: 10px;
     }
 
-    .home-content p {
-        font-size: 1.3rem;
+    .nav-item {
+        margin: 1rem;
+        width: auto;
     }
 
-    .buttonRich {
-        width: 85vw;
+    .imgLogo {
+        height: 10svh;
     }
 
-    .buttonKnowledge {
-        width: 85vw;
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        padding-right: 2rem;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    @keyframes linkIn {
+        from {}
+
+        to {}
+    }
+
+    @keyframes logo {
+        from {}
+
+        to {}
     }
 }
