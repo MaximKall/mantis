@@ -5,68 +5,40 @@ body {
   line-height: 1.5;
 }
 
+::-webkit-scrollbar {
+  background-color: black;
+  width: 0.4em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(82, 82, 82, 0.7);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(82, 82, 82);
+}
+
 h1,
 h2,
 p {
   margin: 0;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f5f5f5;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: #fff;
-  padding: 20px;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-header.small {
-  margin-left: 23.5vw;
-  padding: 10px;
-  width: 50%;
-  border-radius: 0 0 3svh 3svh;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
 section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20svh;
-  padding-bottom: 10svh;
+  padding-top: 10svh;
+  padding-bottom: 5svh;
+}
+
+.content {
+  width: 600px;
+}
+
+.content h2 {
+  text-align: center;
+  padding-bottom: 3svh;
 }
 
 .about-content {
@@ -82,20 +54,11 @@ section {
 }
 
 .about-column {
-  flex-basis: 45%;
   margin: 20px;
   padding: 20px;
   background: #f5f5f5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
-
-.about-column img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
 }
 
 .about-column h3 {
@@ -108,9 +71,18 @@ section {
   margin-bottom: 10px;
 }
 
+.home-content {
+  padding-top: 10svh;
+  padding-bottom: 10svh;
+}
+
 .home-content h1 {
   padding-top: 10svh;
   font-size: 2.5rem;
+  text-align: center;
+}
+
+.home-content p {
   text-align: center;
 }
 
@@ -118,6 +90,10 @@ section {
   display: flex;
   justify-content: center;
   text-decoration: none;
+}
+
+.services-content ul {
+  padding: 0;
 }
 
 .buttonRich {
