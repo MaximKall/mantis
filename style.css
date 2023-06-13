@@ -101,6 +101,28 @@ section {
 
 .services-content ul {
   padding: 0;
+  text-align: center;
+}
+
+.testimonial-content p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-bottom: 2svh;
+}
+
+.video-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+
+.contact-content {
+  text-align: center;
 }
 
 .buttonRich {
