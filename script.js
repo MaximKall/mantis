@@ -17,7 +17,22 @@ window.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  var sectionLinks = document.querySelectorAll('#home a');
+  sectionLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      var targetId = link.getAttribute('href');
+      var targetSection = document.querySelector(targetId);
+      var targetOffset = targetSection.offsetTop;
+      window.scrollTo({
+        top: targetOffset,
+        behavior: 'smooth'
+      });
+    });
+  });
 });
+
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
