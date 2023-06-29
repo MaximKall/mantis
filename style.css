@@ -102,11 +102,6 @@ section {
   text-decoration: none;
 }
 
-.services-content ul {
-  padding: 0;
-  text-align: center;
-}
-
 .testimonial-content p {
   text-align: center;
   font-size: 1.2rem;
@@ -281,6 +276,11 @@ footer {
   }
 }
 
+.services-content ul {
+  padding: 0;
+  text-align: center;
+}
+
 .services-content {
   padding-top: 5svh;
 }
@@ -315,7 +315,7 @@ footer {
 }
 
 .service-icon {
-  font-size: 48px;
+  font-size: 50px;
   margin-bottom: 10px;
 }
 
