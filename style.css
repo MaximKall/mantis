@@ -7,7 +7,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  background-color: black;
+  background-color: #161616;
   width: 0.4em;
 }
 
@@ -29,8 +29,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10svh;
-  padding-bottom: 5svh;
 }
 
 .content {
@@ -44,6 +42,7 @@ section {
 }
 
 .about-content {
+  padding-top: 5svh;
   max-width: 1150px;
   margin: 0 auto;
   text-align: center;
@@ -74,22 +73,25 @@ section {
   margin-bottom: 10px;
 }
 
-.home-content {
-  padding-top: 10svh;
-  padding-bottom: 10svh;
+#home {
+  background-color: #161616;
+  z-index: -1;
+  height: 100vh;
 }
 
 .home-content h1 {
-  color: #41bf67;
+  color: rgb(255, 166, 0);
   font-size: 4rem;
   text-align: center;
 }
 
 .home-content h2 {
+  color: white;
   font-size: 2.5rem;
 }
 
 .home-content p {
+  color: white;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -111,6 +113,10 @@ section {
   padding-bottom: 2svh;
 }
 
+.testimonial-content {
+  padding-top: 10svh;
+}
+
 .video-container {
   width: auto;
   overflow: hidden;
@@ -124,15 +130,34 @@ section {
 }
 
 .contact-content {
+  padding-top: 10svh;
   text-align: center;
+  justify-content: center;
+}
+
+.contact-column {
+  justify-content: center;
+
+  display: flex;
+  align-items: center;
+}
+
+.contact-column a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.contact-column h3 {
+  margin-right: 10px;
 }
 
 .buttonRich {
   display: inline-block;
   padding: 10px 20px;
   background-color: transparent;
-  color: #41bf67;
-  border: 3px solid #41bf67;
+  color: orange;
+  border: 3px solid orange;
   border-radius: 4px;
   cursor: pointer;
   position: relative;
@@ -151,12 +176,13 @@ section {
   right: -100%;
   width: 0%;
   height: 100%;
-  background-color: #41bf67;
+  background-color: orange;
   transition: right 0.3s ease-in-out, width 0.3s ease-in-out;
   z-index: -1;
 }
 
 .buttonRich:hover {
+  z-index: 1;
   color: white;
 }
 
@@ -166,6 +192,7 @@ section {
 }
 
 .buttonRich:not(:hover)::before {
+  z-index: 1;
   right: 100%;
   width: 0%;
 }
@@ -174,8 +201,8 @@ section {
   display: inline-block;
   padding: 10px 20px;
   background-color: transparent;
-  color: black;
-  border: 3px solid black;
+  color: white;
+  border: 3px solid white;
   border-radius: 4px;
   cursor: pointer;
   position: relative;
@@ -194,13 +221,14 @@ section {
   left: -100%;
   width: 0%;
   height: 100%;
-  background-color: black;
+  background-color: white;
   transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
   z-index: -1;
 }
 
 .buttonKnowledge:hover {
-  color: white;
+  z-index: 1;
+  color: black;
 }
 
 .buttonKnowledge:hover::before {
@@ -209,6 +237,7 @@ section {
 }
 
 .buttonKnowledge:not(:hover)::before {
+  z-index: 1;
   left: 100%;
   width: 0%;
 }
@@ -217,6 +246,7 @@ section {
 footer {
   padding: 20px;
   text-align: center;
+  margin-bottom: 7svh;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -224,6 +254,10 @@ footer {
     width: calc(100vw - 30px);
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .home-content {
+    padding-top: 0;
   }
 
   .home-content h1 {
@@ -247,6 +281,10 @@ footer {
   }
 }
 
+.services-content {
+  padding-top: 5svh;
+}
+
 .services-content p {
   text-align: center;
 }
@@ -264,7 +302,7 @@ footer {
 .service-item {
   width: calc(33.33% - 10px);
   min-width: 200px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 20px;
   border-radius: 5px;
   box-sizing: border-box;
@@ -283,6 +321,7 @@ footer {
 
 .service-name {
   font-size: 20px;
+  margin-bottom: 0;
 }
 
 /* Service item hover effect */
