@@ -147,6 +147,12 @@ section {
   margin-right: 10px;
 }
 
+.values-content {
+  padding-top: 10svh;
+  text-align: center;
+  justify-content: center;
+}
+
 .buttonRich {
   display: inline-block;
   padding: 10px 20px;
