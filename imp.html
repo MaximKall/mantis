@@ -1,49 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Impressum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprint</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
         }
 
         h1 {
             font-size: 24px;
+            color: #333;
         }
 
         p {
             font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 80%;
+            text-align: left;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            margin-top: 10svh;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
-    <a href="index.html">back</a>
-    <h1>Impressum</h1>
-    <p>Angaben gemäß § 5 TMG:</p>
-    <p>Firmenname: [Name of your company]</p>
-    <p>Vertretungsberechtigte Person: [Authorized representative]</p>
-    <p>Adresse: [Street, Postal Code, City]</p>
-    <p>Telefon: [Phone number]</p>
-    <p>E-Mail: [Email address]</p>
-    <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: [VAT ID]</p>
-    <p>Registergericht: [Register court]</p>
-    <p>Registernummer: [Register number]</p>
-    <p>Zuständige Aufsichtsbehörde: [Competent supervisory authority]</p>
-    <p>Berufsbezeichnung und berufsrechtliche Regelungen:</p>
-    <p>[Professional title] verliehen in [Country]</p>
-    <p>Zuständige Kammer: [Relevant chamber]</p>
-    <p>Es gelten folgende berufsrechtliche Regelungen: [Professional regulations]</p>
-    <p>Angaben zur Berufshaftpflichtversicherung:</p>
-    <p>Name und Sitz des Versicherers</p>
-    <p>Geltungsraum der Versicherung</p>
-    <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: [Name]</p>
-    <p>Haftungsausschluss:</p>
-    <p>Haftung für Inhalte</p>
-    <p>Haftung für Links</p>
-    <p>Urheberrecht</p>
+    <div class="container">
+        <a class="back-link" href="index.html">← Back to home</a>
+        <h1>Imprint</h1>
+        <h3>Publisher and simultaneously responsible for the concept, web design, and editorial content of this page:
+        </h3>
+        <p>David Todic & Uros Nisavic</p>
+        <p>6850 Dornbirn</p>
+        <p>Austria</p>
+        <p><a href="tel:+436764664618">+43 676 466 46 18</a></p>
+    </div>
 </body>
 
 </html>
